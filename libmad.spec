@@ -1,14 +1,14 @@
 Summary:	MPEG audio decoder library
 Summary(pl):	Biblioteka dekodera strumieni audio MPEG
 Name:		libmad
-Version:	0.15.0b
-Release:	1.2
+Version:	0.15.1b
+Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftp.mars.org/pub/mpeg/%{name}-%{version}.tar.gz
-# Source0-md5:	2e4487cdf922a6da2546bad74f643205
+# Source0-md5:	1be543bc30c56fb6bea1d7bf6a64e66c
 URL:		http://www.underbit.com/products/mad/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
 BuildRequires:	libtool
 Provides:	mad-libs = %{version}
@@ -29,32 +29,32 @@ próbkowania, jak równie¿ tzw. MPEG 2.5. Wszystkie trzy warstwy audio
 zaimplementowane.
 
 %package devel
-Summary:	Header files for libmad
-Summary(pl):	Pliki nag³ówkowe libmad
+Summary:	Header files for libmad library
+Summary(pl):	Pliki nag³ówkowe biblioteki libmad
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Provides:	mad-devel = %{version}
 Obsoletes:	mad-devel < 0.15.0b
 
 %description devel
-Header files for libmad.
+Header files for libmad library.
 
 %description devel -l pl
 Pliki nag³ówkowe biblioteki libmad.
 
 %package static
-Summary:	Static mad libraries
-Summary(pl):	Biblioteki statyczne mad
+Summary:	Static mad library
+Summary(pl):	Biblioteka statyczna mad
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 Provides:	mad-static = %{version}
 Obsoletes:	mad-static < 0.15.0b
 
 %description static
-Static mad libraries.
+Static mad library.
 
 %description static -l pl
-Biblioteki statyczne mad.
+Biblioteka statyczna mad.
 
 %prep
 %setup -q
