@@ -22,14 +22,15 @@ so-called MPEG 2.5 format. All three audio layers (Layer I, Layer II
 and Layer III a.k.a. MP3) are fully implemented.
 
 %description -l pl
-MAD jest wysokiej jako¶ci dekoderem audio MPEG. Obecnie wspiera MPEG-1
-oraz MPEG-2, jak równie¿ tzw. MPEG 2.5. Wszystkie trzy warstwy audio
+MAD jest wysokiej jako¶ci dekoderem audio MPEG. Obecnie obs³uguje
+MPEG-1 oraz rozszerzenie MPEG-2 dla ni¿szych czêstotliwo¶ci
+próbkowania, jak równie¿ tzw. MPEG 2.5. Wszystkie trzy warstwy audio
 (Layer I, Layer II oraz Layer III znany równie¿ jako MP3) s± w pe³ni
 zaimplementowane.
 
 %package devel
 Summary:	Header files for libmad
-Summary(pl):	Pliki nag³ówkowe do libmad
+Summary(pl):	Pliki nag³ówkowe libmad
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
 Provides:	mad-devel = %{version}
@@ -43,7 +44,7 @@ Pliki nag³ówkowe biblioteki libmad.
 
 %package static
 Summary:	Static mad libraries
-Summary(pl):	Biblioteki statyczne do mad
+Summary(pl):	Biblioteki statyczne mad
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
 Provides:	mad-static = %{version}
@@ -53,11 +54,10 @@ Obsoletes:	mad-static < 0.15.0b
 Static mad libraries.
 
 %description static -l pl
-Biblioteki statyczne do mad.
+Biblioteki statyczne mad.
 
 %prep
 %setup -q
-#%patch -p1
 
 %build
 %{__libtoolize}
@@ -76,15 +76,15 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%post   -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
+
 %files
 %defattr(644,root,root,755)
-%doc README TODO CHANGES CREDITS
+%doc CHANGES COPYRIGHT CREDITS README TODO
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
