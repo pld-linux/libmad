@@ -2,7 +2,7 @@ Summary:	MPEG audio decoder library
 Summary(pl):	Biblioteka dekodera strumieni audio MPEG
 Name:		libmad
 Version:	0.15.0b
-Release:	1.1
+Release:	1.2
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftp.mars.org/pub/mpeg/%{name}-%{version}.tar.gz
@@ -11,8 +11,8 @@ URL:		http://www.underbit.com/products/mad/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
-Provides:	mad-libs
-Obsoletes:	mad-libs
+Provides:	mad-libs = %{version}
+Obsoletes:	mad-libs < 0.15.0b
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,7 +32,8 @@ Summary:	Header files for libmad
 Summary(pl):	Pliki nag³ówkowe do libmad
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
-Obsoletes:	mad-devel
+Provides:	mad-devel = %{version}
+Obsoletes:	mad-devel < 0.15.0b
 
 %description devel
 Header files for libmad.
@@ -45,6 +46,8 @@ Summary:	Static mad libraries
 Summary(pl):	Biblioteki statyczne do mad
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
+Provides:	mad-static = %{version}
+Obsoletes:	mad-static < 0.15.0b
 
 %description static
 Static mad libraries.
