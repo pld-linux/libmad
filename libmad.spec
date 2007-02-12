@@ -1,5 +1,5 @@
 Summary:	MPEG audio decoder library
-Summary(pl):	Biblioteka dekodera strumieni audio MPEG
+Summary(pl.UTF-8):   Biblioteka dekodera strumieni audio MPEG
 Name:		libmad
 Version:	0.15.1b
 Release:	5
@@ -22,16 +22,16 @@ and the MPEG-2 extension to Lower Sampling Frequencies, as well as the
 so-called MPEG 2.5 format. All three audio layers (Layer I, Layer II
 and Layer III a.k.a. MP3) are fully implemented.
 
-%description -l pl
-MAD jest wysokiej jako∂ci dekoderem audio MPEG. Obecnie obs≥uguje
-MPEG-1 oraz rozszerzenie MPEG-2 dla niøszych czÍstotliwo∂ci
-prÛbkowania, jak rÛwnieø tzw. MPEG 2.5. Wszystkie trzy warstwy audio
-(Layer I, Layer II oraz Layer III znany rÛwnieø jako MP3) s± w pe≥ni
+%description -l pl.UTF-8
+MAD jest wysokiej jako≈õci dekoderem audio MPEG. Obecnie obs≈Çuguje
+MPEG-1 oraz rozszerzenie MPEG-2 dla ni≈ºszych czƒôstotliwo≈õci
+pr√≥bkowania, jak r√≥wnie≈º tzw. MPEG 2.5. Wszystkie trzy warstwy audio
+(Layer I, Layer II oraz Layer III znany r√≥wnie≈º jako MP3) sƒÖ w pe≈Çni
 zaimplementowane.
 
 %package devel
 Summary:	Header files for libmad library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki libmad
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki libmad
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Provides:	mad-devel = %{version}
@@ -40,12 +40,12 @@ Obsoletes:	mad-devel < 0.15.0b
 %description devel
 Header files for libmad library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki libmad.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki libmad.
 
 %package static
 Summary:	Static mad library
-Summary(pl):	Biblioteka statyczna mad
+Summary(pl.UTF-8):   Biblioteka statyczna mad
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Provides:	mad-static = %{version}
@@ -54,7 +54,7 @@ Obsoletes:	mad-static < 0.15.0b
 %description static
 Static mad library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka statyczna mad.
 
 %prep
