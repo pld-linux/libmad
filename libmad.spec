@@ -1,5 +1,5 @@
 Summary:	MPEG audio decoder library
-Summary(pl.UTF-8):   Biblioteka dekodera strumieni audio MPEG
+Summary(pl.UTF-8):	Biblioteka dekodera strumieni audio MPEG
 Name:		libmad
 Version:	0.15.1b
 Release:	5
@@ -31,7 +31,7 @@ zaimplementowane.
 
 %package devel
 Summary:	Header files for libmad library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libmad
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libmad
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Provides:	mad-devel = %{version}
@@ -45,7 +45,7 @@ Pliki nagłówkowe biblioteki libmad.
 
 %package static
 Summary:	Static mad library
-Summary(pl.UTF-8):   Biblioteka statyczna mad
+Summary(pl.UTF-8):	Biblioteka statyczna mad
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Provides:	mad-static = %{version}
