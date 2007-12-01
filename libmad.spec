@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Biblioteka dekodera strumieni audio MPEG
 Name:		libmad
 Version:	0.15.1b
 Release:	5
-License:	GPL
+License:	GPL v2+
 Group:		Libraries
 Source0:	ftp://ftp.mars.org/pub/mpeg/%{name}-%{version}.tar.gz
 # Source0-md5:	1be543bc30c56fb6bea1d7bf6a64e66c
