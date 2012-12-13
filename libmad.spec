@@ -2,12 +2,13 @@ Summary:	MPEG audio decoder library
 Summary(pl.UTF-8):	Biblioteka dekodera strumieni audio MPEG
 Name:		libmad
 Version:	0.15.1b
-Release:	6
+Release:	7
 License:	GPL v2+
 Group:		Libraries
 Source0:	ftp://ftp.mars.org/pub/mpeg/%{name}-%{version}.tar.gz
 # Source0-md5:	1be543bc30c56fb6bea1d7bf6a64e66c
 Patch0:		%{name}-pkgconfig.patch
+Patch1:		%{name}-no_fforce_mem.patch
 URL:		http://www.underbit.com/products/mad/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
@@ -60,6 +61,7 @@ Biblioteka statyczna mad.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__libtoolize}
